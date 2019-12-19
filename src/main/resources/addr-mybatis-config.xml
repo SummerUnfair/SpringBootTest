@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <settings>
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
+
+    <environments default="TEST">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="oracle.jdbc.driver.OracleDriver"/>
+                <property name="url" value="jdbc:oracle:thin:@10.145.206.20:1521:gis"/>
+                <property name="username" value="GIS"/>
+                <property name="password" value="M3fXy_TFaUt"/>
+            </dataSource>
+        </environment>
+
+        <environment id="TEST">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://192.168.74.195:3306/gis_gzjt"/>
+                <property name="username" value="root"/>
+                <property name="password" value="andy~!@"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper resource="addr-mybatis/addressIdMapper.xml"/>
+    </mappers>
+</configuration>

@@ -1,6 +1,7 @@
 package InterfaceTest;
 
 import Util.HttpClientUtil;
+import Util.JdbcUtil;
 
 import java.io.*;
 import java.sql.*;
@@ -8,7 +9,7 @@ import java.util.Properties;
 
 public class HandleOfSubtype_end_version {
 
-    public static Connection conn= getConnection();
+    public static Connection conn= JdbcUtil.getTestConnection();
     public static Statement st;
     public static float count=0;
     public static float successCount = 0;
@@ -91,11 +92,7 @@ public class HandleOfSubtype_end_version {
 
         String url=urlIP+"AddressSearchController/getAddrGrad.do?addr_full="+addressName;
         String jsonRes = null;
-        Object level=null;
-        Object addrTerm=null;
 
-        int count =0;
-        int len=0;
         try {
             jsonRes = HttpClientUtil.get(url);
         }catch (Exception e){
@@ -110,16 +107,4 @@ public class HandleOfSubtype_end_version {
             }
     }
 
-    private static Connection getConnection() {
-        Connection conn = null;
-        try {
-            Class.forName("oracle.jdbc.driver.OracleDriver");
-            conn = DriverManager.getConnection("jdbc:oracle:thin:@10.145.206.20:1521:gis", "GIS", "M3fXy_TFaUt");
-            conn.setAutoCommit(false);
-            return conn;
-        } catch (Exception e) {
-            System.out.println(e);
-            return conn;
-        }
-    }
 }

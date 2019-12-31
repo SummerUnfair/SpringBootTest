@@ -5,7 +5,13 @@ import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
 import java.io.*;
-
+/*
+* 模糊匹配接口性能测试
+* URL：http://10.145.220.62:8058/gis/iscenter/AddressSearch/AddressSearchController/getAddrGrad.do?addr_full=addressName
+*
+*
+*
+* */
 public class HandleOfApiDim_advance_version {
 
     public static Writer writer1;

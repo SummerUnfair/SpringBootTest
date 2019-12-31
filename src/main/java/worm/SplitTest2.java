@@ -1,7 +1,7 @@
 package worm;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class SplitTest2 {
 
@@ -68,19 +68,21 @@ public class SplitTest2 {
 //            }
 //        }
 
-            Set<String> set =new HashSet<>();
-            set.add("地址1");
-            set.add("地址2");
-            set.add("地址3");
-            set.add("地址4");
-            set.add("地址1");
-            set.add("地址2");
-            set.add("地址3");
-            set.add("地址4");
-
-            for (String str : set) {
-                System.out.println(str);
-            }
+//            Set<String> set =new HashSet<>();
+//            set.add("地址1");
+//            set.add("地址2");
+//            set.add("地址3");
+//            set.add("地址4");
+//            set.add("地址1");
+//            set.add("地址2");
+//            set.add("地址3");
+//            set.add("地址4");
+//
+//            for (String str : set) {
+//                System.out.println(str);
+//            }
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//设置日期格式
+        System.out.println(df.format(new Date()));// new Date()为获取当前系统时间
 
 
 

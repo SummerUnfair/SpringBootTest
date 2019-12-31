@@ -6,6 +6,11 @@ import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
+/*
+* 六边形网格的生成
+* 入参：x,y 坐标点,z 网格大小
+* 出参：批量坐标点（六边形六个点的坐标为一组,生成100组（可控）
+* */
 public class HandleOf_Figure_inital_version {
 
     static List<String[]> list=new ArrayList<String[]>();

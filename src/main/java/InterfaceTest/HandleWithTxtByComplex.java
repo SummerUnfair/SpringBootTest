@@ -1,16 +1,16 @@
 package InterfaceTest;
 
+import Util.JdbcUtil;
 import Util.SmartMatch;
 
 import java.io.*;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class HandleWithTxtByComplex {
 
-     static Connection conn=getConnection();
+     static Connection conn= JdbcUtil.getTestConnection();
      static PreparedStatement ps=null;
     static{
 
@@ -123,21 +123,6 @@ public class HandleWithTxtByComplex {
 
     }
 
-    /**
-     * 获取数据库连接
-     */
-    private  static  Connection getConnection() {
-        Connection conn = null;
-        try {
-            Class.forName("oracle.jdbc.driver.OracleDriver");
-            conn = DriverManager.getConnection("jdbc:oracle:thin:@10.145.206.20:1521:gis", "GIS", "M3fXy_TFaUt");
-            conn.setAutoCommit(false);
-            return conn;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return conn;
-        }
-    }
 }
 
 

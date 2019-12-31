@@ -29,6 +29,7 @@
             </dataSource>
         </environment>
     </environments>
+
     <mappers>
         <mapper resource="addr-mybatis/addressIdMapper.xml"/>
     </mappers>

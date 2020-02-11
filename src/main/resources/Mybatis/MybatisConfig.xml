@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <settings>
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
+
+    <!--使用typeAliases配置别名，它只能配置Pojo类的别名-->
+    <typeAliases>
+    <!--typeAliases用于配置别名,type属性指定的是实体类全限定类名。alias属性指定别名，当指定了别名就不再区分大小写-->
+    <!--<typeAliases type="Pojo.User"  alias="user"></typeAliases>-->
+        <package name="Pojo"></package>
+    </typeAliases>
+
+    <environments default="mysql">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="oracle.jdbc.driver.OracleDriver"/>
+                <property name="url" value="jdbc:oracle:thin:@10.145.206.20:1521:gis"/>
+                <property name="username" value="GIS"/>
+                <property name="password" value="M3fXy_TFaUt"/>
+            </dataSource>
+        </environment>
+
+        <environment id="TEST">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://192.168.74.195:3306/gis_gzjt"/>
+                <property name="username" value="root"/>
+                <property name="password" value="andy~!@"/>
+            </dataSource>
+        </environment>
+
+        <!--配置Mysql的环境-->
+        <environment id="mysql">
+            <!--配置事务的类型-->
+            <transactionManager type="JDBC"></transactionManager>
+            <!--配置数据源(连接池)-->
+            <dataSource type="POOLED">
+                <!--配置连接数据库的四个基本信息-->
+                <property name="driver" value="com.mysql.jdbc.Driver" />
+                <property name="url" value="jdbc:mysql://localhost:3306/db1" />
+                <property name="username" value="root" />
+                <property name="password" value="root" />
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="Mybatis/MybatisMapper/UserMapper.xml"/>
+        <mapper resource="Mybatis/MybatisMapper/addressIdMapper.xml"/>
+        <!--package标签是用于指定Dao接口所在的包，当指定了之后就不需要再写mapper以及resource 或者class了-->
+        <!--<package name="Mybatis.MybatisMapper"></package>-->
+
+    </mappers>
+</configuration>

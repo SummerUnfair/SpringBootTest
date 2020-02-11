@@ -1,7 +1,170 @@
 package worm;
 
-public class SplitTest {
+import Mapper.UserMapper;
+import Pojo.User;
+import Util.JdbcUtils;
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.junit.Test;
 
+import java.io.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/**
+ * 单元测试
+ * ctrl shift f10
+ */
+public class JunitTest {
+
+    @Test
+    public void ListTest(){
+
+        List list = new ArrayList();
+        list.add("张三");
+        list.add("黎明");
+        list.add("李梅");
+        list.add("利比");
+        System.out.println(list.get(3));
+        list.add(3,"宙斯");
+        System.out.println(list);
+
+    }
+
+
+    /**
+     * 迭代器取出单列集合元素
+     */
+    @Test
+    public void CollectionTest(){
+
+        Collection<String>   coll = new ArrayList<>();
+        System.out.println(coll);   //重写了toString方法   []
+        coll.add("黎明");
+        System.out.println(coll);
+        System.out.println(coll.contains("黎明"));   //true
+        coll.add("李明");
+        Iterator<String> it =  coll.iterator();
+        while(it.hasNext()){
+            String e = it.next();
+            System.out.println(e);
+        }
+    }
+
+    /**
+     * JdbcUtils工具类的使用
+     */
+    @Test
+    public void connectionTest(){
+        Connection conn =null;
+        PreparedStatement ps =null;
+        try {
+            conn = JdbcUtils.getConnection();
+            String sql = "insert into emp values (?,?,?)" ;
+            ps = conn.prepareStatement(sql);
+            ps.setString(1,"2");
+            ps.setString(2,"张三");
+            ps.setString(3,"男");
+            int count = ps.executeUpdate();
+            System.out.println(count);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            JdbcUtils.close(ps,conn);
+        }
+    }
+
+    /**
+     * 文本对比不同,进行输出
+     */
+    @Test
+    public void compareTxtTest(){
+
+        Map<String, Integer> map = new HashMap<String, Integer>();
+        try {
+            //主文本
+            Reader in = new FileReader(new File("C:\\Users\\user\\Desktop\\text2.txt"));
+            BufferedReader reader = new BufferedReader(in);
+            String s = "";
+            while ((s = reader.readLine()) != null) {
+                map.put(s, 1);
+            }
+            reader.close();
+            //对比文本
+            in = new FileReader(new File("C:\\Users\\user\\Desktop\\text1.txt"));
+            reader = new BufferedReader(in);
+            s = "";
+            while ((s = reader.readLine()) != null) {
+                //输出不同
+                if (!map.containsKey(s)) {
+                    System.out.println(s);
+                }
+            }
+            reader.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    /**
+     * Mybatis测试
+     */
+    @Test
+    public void mybatisTest(){
+
+        try {
+            InputStream inputStream = Resources.getResourceAsStream("Mybatis/MybatisConfig.xml");
+            SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+            SqlSession session = sqlSessionFactory.openSession();
+            UserMapper mapper = session.getMapper(UserMapper.class);
+            List<User> users=mapper.findAll();
+            for (User user : users){
+                System.out.println(user);
+            }
+            System.out.println("SUCCESS!!!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    /**
+     * Java正则处理字符串
+     */
+    @Test
+    public void  PatternTest(){
+
+        String str = "(  ( GLDWH = '14000' )  )";
+        Pattern pattern = Pattern.compile("([\'\"])(.*?)\\1");
+        Matcher matcher = pattern.matcher(str );
+        if (matcher.find()) {
+            String collegeId = matcher.group(2);
+            System.out.println(collegeId);//14000
+        }
+    }
+    /**
+     * Properties配置文件读取
+     */
+    @Test
+    public void PropertiesTest(){
+
+        try {
+            Properties pr = new Properties();
+            InputStream inStream = JunitTest.class.getClassLoader().getResourceAsStream("initResource.properties");
+            //InputStream inStream = new FileInputStream("initResource.properties");
+            pr.load(inStream);
+            String URL = pr.getProperty("URL");
+            System.out.println(URL);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 //    public static boolean isNumber(String string) {
 //        if (string == null)
@@ -10,9 +173,14 @@ public class SplitTest {
 //        return pattern.matcher(string).matches();
 //    }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
 
+
+
+//        System.out.println(String.class.getSimpleName());// String
+//        // 得到类的全名称（包含所在的包名）
+//        System.out.println(String.class.getName());// java.lang.String
 
 //        String AddressName="12弄12支弄12号";
 ////        int addressINDEX = AddressName.indexOf("弄");
@@ -25,6 +193,8 @@ public class SplitTest {
 //
 //        String a=AddressName.substring(addressINDEX);
 //        System.out.println(a);
+
+
 
 
 //        String str = "(  ( GLDWH = '14000' )  )";

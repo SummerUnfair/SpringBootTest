@@ -1,5 +1,7 @@
 package InterfaceTest;
 
+import Util.JdbcUtil;
+
 import java.io.*;
 import java.sql.*;
 import java.text.SimpleDateFormat;
@@ -14,7 +16,7 @@ import java.util.*;
  */
 public class HandleOfLog_end_version {
 
-    static Connection  conn= getConnection();
+    static Connection  conn= JdbcUtil.getTestConnection();
     static PreparedStatement  stmt;
     static String SERVICE_REDHAT;
 
@@ -54,7 +56,7 @@ public class HandleOfLog_end_version {
     public static void main(String[] args) throws Exception {
         Properties prop = new Properties();
 
-        InputStream inStream = HandleOfLog_end_version.class.getClassLoader().getResourceAsStream("HandleOfLogR.properties");
+        InputStream inStream = HandleOfLog_end_version.class.getClassLoader().getResourceAsStream("initResource.properties");
         prop.load(inStream);
 
         String path1=(String)prop.get("path1");
@@ -177,19 +179,6 @@ public class HandleOfLog_end_version {
             node.code500++;
         }else {
             node.other++;
-        }
-    }
-
-    private static Connection getConnection() {
-        Connection conn = null;
-        try {
-            Class.forName("oracle.jdbc.driver.OracleDriver");
-            conn = DriverManager.getConnection("jdbc:oracle:thin:@10.7.100.15:1521:gis", "GIS", "4WY_Md1BE28");
-            conn.setAutoCommit(false);
-            return conn;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return conn;
         }
     }
 

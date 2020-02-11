@@ -22,8 +22,8 @@ public class HandleOfSubtype_end_version {
     private static long  TIME;
     private static long countdata;
 
-    private static Writer writer1;   //用于文本一
-    private static Writer writer2;   //用于文本二
+    private static Writer writer1;
+    private static Writer writer2;
 
     private static String  urls;
     private static String init_Path;
@@ -32,10 +32,9 @@ public class HandleOfSubtype_end_version {
     public static void main(String[] args){
 
         try {
-            init_Pro();
-            init_TxtName();
-            init_Txt();
-            //////////////////////////////////////
+            initConfig();
+            System.out.println("load success!");
+
             get_AddressInfo();
             //////////////////////////////////////
             writer1.close();
@@ -46,63 +45,52 @@ public class HandleOfSubtype_end_version {
         }
     }
 
-    /*
-    * 生成标准文件名
-    * */
-    public static void init_TxtName(){
+    /**
+     * 初始化资源
+     */
+    public static void initConfig(){
         try {
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");//设置日期格式
-        String TIME=df.format(new Date());  //日期
-        writer1 = new FileWriter(new File(init_Path+iName+TIME+".txt"));
-        writer2=  new FileWriter(new File(init_Path+iName+TIME+"-messages"+".txt"));
-        } catch(IOException e){
-            System.out.println(e);
-        }
-    }
+            //加载配置资源
+            Properties prop = new Properties();
+            InputStream inStream = HandleOfSubtype_end_version.class.getClassLoader().getResourceAsStream("initResource.properties");
+            prop.load(inStream);
+            //初始路径
+            init_Path=(String)prop.get("init_Path");
+            //被测接口URL
+            urls=(String)prop.get("url");
+            //被测接口名
+            iName=(String)prop.get("iName");
 
+            //生成标准文件名
+            SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+            String TIME=df.format(new Date());
+            String path1=init_Path+iName+TIME+".txt";
+            String path2=init_Path+iName+TIME+"-messages"+".txt";
+            writer1 = new FileWriter(new File(path1));
+            writer2=  new FileWriter(new File(path2));
 
-    /*
-    *加载配置文件
-    * */
-    public static void init_Pro(){
-        try {
-        Properties prop = new Properties();
-        InputStream inStream = HandleOfLog_end_version.class.getClassLoader().getResourceAsStream("HandleOfLogR.properties");
-        prop.load(inStream);
-        init_Path=(String)prop.get("init_Path");  //初始路径
-        urls=(String)prop.get("url");             //被测接口URL
-        iName=(String)prop.get("iName");          //被测接口名
-        } catch(IOException e){
-            System.out.println(e);
-        }
-    }
-    /*
-    * 文本起始内容
-    * */
-    public static void init_Txt(){
-
-        try {
-        writer1.append("\t\t"+"PAAS平台性能测试"+"\r\n");
-        writer1.append("====================================================="+"\r\n");
-        writer1.append("问题描述："+"同项目下相同接口于PAAS平台、本地平台及21服务平台，使用效率存在差异。"+"\r\n");
-        writer1.append("差异内容："+"\r\n");
-        writer1.append("\t"+"1.PAAS平台环境下接口调用存在超时问题。本地平台无超时现象发生。21服务平台无超时现象发生。"+"\r\n");
-        writer1.append("====================================================="+"\r\n");
-        writer1.append("接口描述："+"\r\n");
-        writer1.append("\t"+"接口名称："+iName+"\r\n");
-        writer1.append("\t"+"接口功能：对地址名称进行分级"+"\r\n");
+            //生成文件固定内容
+            writer1.append("\t\t"+"PAAS Performance Testing"+"\r\n");
+            writer1.append("====================================================="+"\r\n");
+            writer1.append("Problem Description ：同项目下相同接口于PAAS平台、本地平台及21服务平台，使用效率存在差异。"+"\r\n");
+            writer1.append("差异内容："+"\r\n");
+            writer1.append("\t"+"1.PAAS平台环境下接口调用存在超时问题。本地平台无超时现象发生。21服务平台无超时现象发生。"+"\r\n");
+            writer1.append("====================================================="+"\r\n");
+            writer1.append("Interface Description ："+"\r\n");
+            writer1.append("\t"+"Interface Name ："+iName+"\r\n");
+            writer1.append("\t"+"Interface Function ：对地址名称进行分级"+"\r\n");
 //        writer1.append("\t"+"接口入参：addr_full"+"\r\n");
 //        writer1.append("\t"+"接口出参：level、addrTerm"+"\r\n");
-        writer1.append("====================================================="+"\r\n");
-        writer1.append("测试数据描述："+"\r\n");
-        writer1.append("\t"+"数据来源：x_address_info表"+"\r\n");
-        writer1.append("\t"+"数据数量：10000条"+"\r\n");
-        writer1.append("\t"+"数据获取方式：随机抽样"+"\r\n");
-        writer1.append("====================================================="+"\r\n");
-        writer1.append("测试数"+"\t\t"+"通过数"+"\t\t"+"失败数"+"\t\t"+"失败率"+"\t\t"+"平均响应时间(毫秒)"+"\r\n");
-        writer1.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
+            writer1.append("====================================================="+"\r\n");
+            writer1.append("Data Description："+"\r\n");
+            writer1.append("\t"+"Data Source ：x_address_info表"+"\r\n");
+            writer1.append("\t"+"Data number ：10000条"+"\r\n");
+            writer1.append("\t"+"Access Method ：随机抽样"+"\r\n");
+            writer1.append("====================================================="+"\r\n");
+            writer1.append("测试数"+"\t\t"+"通过数"+"\t\t"+"失败数"+"\t\t"+"失败率"+"\t\t"+"平均响应时间(毫秒)"+"\r\n");
+            writer1.flush();
+        } catch(IOException e){
+            System.out.println(e);
         }
     }
 
@@ -116,7 +104,8 @@ public class HandleOfSubtype_end_version {
             for (int i = 0; i < 3; i++){
                 try {
                     st = conn.createStatement();
-                    ResultSet rs = st.executeQuery("select xa.addr_full from (select * from x_address_info_new ORDER BY dbms_random.value) xa  WHERE xa.subtype >4270 and xa.subtype < 4275 and rownum<10001 ");
+                    String sql ="select xa.addr_full from (select * from x_address_info_new ORDER BY dbms_random.value) xa  WHERE xa.subtype >4270 and xa.subtype < 4275 and rownum<10001 ";
+                    ResultSet rs = st.executeQuery(sql);
                     while (rs.next()) {
                         String addr_full = rs.getString("addr_full");
                         addr_full=addr_full.replaceAll(" +","");
@@ -158,7 +147,7 @@ public class HandleOfSubtype_end_version {
                     while (rs.next()) {
                         String addr_full = rs.getString("addr_full");
                         addr_full=addr_full.replaceAll(" +","");
-                        getMatchData2(addr_full);
+                        getRandomAddressName(addr_full);
                     }
                     rs.close();
                     st.close();
@@ -216,27 +205,22 @@ public class HandleOfSubtype_end_version {
         }
     }
 
-    /*
-    *
-    *
-    * */
-    public static void getMatchData2 (String addressName){
-
-        int L=addressName.length()/2;
-
-        String address_lastName=addressName.substring(L);    //5~10
-
-        int Last_randomNumber = (int)(Math.random() *address_lastName.length())+L ;  //括号内,下标0~4
+    /**
+     * 获取随机地址
+     * @param addressName
+     */
+    public static void getRandomAddressName (String addressName){
 
         String address_allName="";
+
+        int L=addressName.length()/2;
+        String address_lastName=addressName.substring(L);    //5~10
+        int Last_randomNumber = (int)(Math.random() *address_lastName.length())+L ;  //括号内,下标0~4
         try {
             address_allName=addressName.substring(0,Last_randomNumber);
-
         }catch (Exception e){
-
             System.out.print("");
         }
-
 
         String url=urls+iName+".do?address_name="+address_allName;
         String jsonRes = null;
@@ -265,7 +249,6 @@ public class HandleOfSubtype_end_version {
 
         }
     }
-
 
 /*
 * message文本获取

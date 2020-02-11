@@ -7,50 +7,57 @@
 
     <!-- 模型版本。maven2.0必须是这样写，现在是maven2唯一支持的版本 -->
     <modelVersion>4.0.0</modelVersion>
-
-    <!-- 公司或者组织的唯一标志，并且配置时生成的路径也是由此生成，
-    如com.winner.trade，maven会将该项目打成的jar包放本地路径：/com/winner/trade -->
     <groupId>TESTS</groupId>
-
-    <!-- 本项目的唯一ID，一个groupId下面可能多个项目，就是靠artifactId来区分的 -->
     <artifactId>springbootTest</artifactId>
-
-    <!-- 本项目目前所处的版本号 -->
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
-        <!--这是spring boot 的父级依赖 ，这样当前项目就是spring boot 项目了。-->
-        <!--用了它之后常用的包依赖就可以省略version标签了,它里面定义了其它所对应的其他包的版本号 -->
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.1.RELEASE</version>
     </parent>
 
+    <!--统一管理Jar包版本-->
     <properties>
-
-        <!-- <file.encoding>UTF-8</file.encoding>
-        <java.source.version>1.8</java.source.version>
-        <java.target.version>1.8</java.target.version>-->
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-
+    <mysql.version>5.1.25</mysql.version>
     </properties>
 
-    <!-- 定义本项目的依赖关系， -->
-    <dependencies>
+    <!--锁定Jar包版本-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
+    <dependencies>
+        <!--mysql连接-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.25</version>
+            <version>${mysql.version}</version>
+        </dependency>
+        <!--oracle连接-->
+        <dependency>
+            <groupId>12</groupId>
+            <artifactId>12</artifactId>
+            <version>1.0.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/ojdbc6.jar</systemPath>
         </dependency>
 
-        <!--&lt;!&ndash;就需要在他的pom文件中新建一个dependency节点，将本项目的groupId、artifactId、version写入， maven就会把你上传的jar包下载到他的本地 &ndash;&gt;-->
-        <!--<groupId>org.springframework.boot</groupId>-->
-        <!--&lt;!&ndash;spring-boot-starter-web就帮你配置好了Spring MVC &ndash;&gt;-->
-        <!--<artifactId>spring-boot-starter-web</artifactId>-->
-        <!--</dependency>-->
+        <!-- 使用Mybatis 只需要将此配置导入即可使用-->
+        <!-- Mybatis内置的日志工厂提供日志功能，具体选择哪个日志实现工具，由MyBatis的内置日志工厂确定。它会使用最先找到的-->
+        <!-- 如果一个都未找到，日志功能就会被禁用。 -->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.0.0</version>
+        </dependency>
 
         <!--注意排除掉的是log4j-to-slf4j包！！！！！-->
         <!--Spring boot Starter 引入的日志组件是log4j-to-slf4j  -->
@@ -64,14 +71,6 @@
             <groupId>com.hankcs.nlp</groupId>
             <artifactId>hanlp-lucene-plugin</artifactId>
             <version>1.1.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>12</groupId>
-            <artifactId>12</artifactId>
-            <version>1.0.0</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/ojdbc6.jar</systemPath>
         </dependency>
 
         <dependency>
@@ -104,8 +103,6 @@
             <version>2.8.0</version>
         </dependency>
 
-
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -128,13 +125,13 @@
             <artifactId>cglib</artifactId>
             <version>3.1</version>
         </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <!--在开发阶段的时候最重要的是单元测试了，springboot对单元测试的支持已经很完善了。 -->
-            <!--在测试类的类头部需要添加：@RunWith(SpringRunner.class)和@SpringBootTest注解，在测试方法的顶端添加@Test即可，最后在方法上点击右键run就可以运行。 -->
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
@@ -142,16 +139,16 @@
         </dependency>
 
         <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>1.2.17</version>
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>2.10.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
@@ -162,31 +159,9 @@
             <groupId>net.sf.json-lib</groupId>
             <artifactId>json-lib</artifactId>
             <version>2.4</version>
-
             <!--有时候引用某个jar包，classifier不写的话会报错。 -->
             <classifier>jdk15</classifier>
         </dependency>
-
-        <!-- 使用Mybatis 只需要将此配置导入即可使用-->
-        <!-- Mybatis内置的日志工厂提供日志功能，具体选择哪个日志实现工具，由MyBatis的内置日志工厂确定。它会使用最先找到的-->
-        <!-- 如果一个都未找到，日志功能就会被禁用。 -->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>2.0.0</version>
-        </dependency>
-
-        <!--阿里连接池支持-->
-        <!--导入阿里巴巴 自主开发的数据库连接池 德鲁伊（druid）数据库连接池-->
-        <!--德鲁伊 比 常用的c3p0数据库速度更快-->
-        <!--但目前还有个自称世界上最快的数据库连接池  名字叫HikariCP -->
-        <!--连接池一大堆-->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.0.12</version>
-        </dependency>
-
 
         <dependency>
             <groupId>commons-net</groupId>
@@ -194,6 +169,18 @@
             <version>3.3</version>
         </dependency>
 
+        <!--阿里连接池支持-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.0.12</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -214,7 +201,24 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+               <groupId>org.apache.tomcat.maven</groupId>
+               <artifactId>tomcat7-maven-plugin</artifactId>
+               <version>2.2</version>
+               <configuration>
+                  <port>8888</port>
+               </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                   <target>1.8</target>
+                   <source>1.8</source>
+                   <encoding>UTF-8</encoding>
+                 </configuration>
+            </plugin>
         </plugins>
     </build>
-
 </project>

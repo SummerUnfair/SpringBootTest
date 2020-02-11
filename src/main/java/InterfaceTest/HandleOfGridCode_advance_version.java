@@ -1,6 +1,7 @@
 package InterfaceTest;
 
 import Util.HttpClientUtil;
+import Util.JdbcUtil;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
@@ -20,7 +21,7 @@ public class HandleOfGridCode_advance_version {
     //static String  urlIP="http://10.6.246.32:8080/";//本地tomcat库
 
     static Writer writer;
-    static Connection conn= getConnection();
+    static Connection conn= JdbcUtil.getTestConnection();
     static PreparedStatement ps;
 
     static {
@@ -52,14 +53,11 @@ public class HandleOfGridCode_advance_version {
 
             if(s.trim().length() == 0)   continue;
             writer.append(s+"\t");
-            String sss=s.replaceAll(" ", "");
-            String old_addr_full = sss.replace("\t","");
+            s=s.replaceAll(" ", "").replace("\t","");
 
             try {
-
-                getAddressName(old_addr_full);
+                getAddressName(s);
                 writer.append("\r\n");
-
             }catch (Exception e){
 
                 writer.append("getAddressName方法调用失败!!"+"\r\n");
@@ -69,9 +67,9 @@ public class HandleOfGridCode_advance_version {
 
     }
 
-    public static void getAddressName(String old_addr_full) throws IOException, SQLException {
+    public static void getAddressName(String s) throws IOException, SQLException {
 
-        String url=urlIP+"addrselection/addressIndex/smartMatchAddress.do?addr_full="+old_addr_full;
+        String url=urlIP+"addrselection/addressIndex/smartMatchAddress.do?addr_full="+s;
 
         String jsonRes = null;
         Object addressId=null;
@@ -134,19 +132,5 @@ public class HandleOfGridCode_advance_version {
         return GRIDCODE;
 
     }
-
-    private static Connection getConnection() {
-        Connection conn = null;
-        try {
-            Class.forName("oracle.jdbc.driver.OracleDriver");
-            conn = DriverManager.getConnection("jdbc:oracle:thin:@10.7.100.15:1521:gis", "GIS", "4WY_Md1BE28");
-            conn.setAutoCommit(false);
-            return conn;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return conn;
-        }
-    }
-
 }
 

@@ -1,5 +1,7 @@
 package worm;
 
+import org.junit.Test;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -12,6 +14,11 @@ public class SplitTest2 {
 //        Pattern pattern = Pattern.compile("^-?\\d+(\\.\\d+)?$");
 //        return pattern.matcher(string).matches();
 //    }
+
+    @Test
+    public void staticTest() throws ClassNotFoundException {
+        Class.forName("A",true,this.getClass().getClassLoader());
+    }
 
     public static void main(String[] args) {
 

@@ -8,6 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
+import redis.clients.jedis.Jedis;
 
 import java.io.*;
 import java.sql.Connection;
@@ -23,18 +24,134 @@ import java.util.regex.Pattern;
  */
 public class JunitTest {
 
+    /**
+     * Map集合的遍历方式
+     */
     @Test
-    public void ListTest(){
+    public void mapKeySetTest(){
+        Map<String,Integer> map = new HashMap<>();
+        map.put("李林",160);
+        map.put("丽丽",161);
+        map.put("莉莉",162);
+        Set<String> set = map.keySet();
+        for (String o : set){
+            int a =  map.get(o);
+            System.out.println(o+" "+a);
+        }
+    }
 
-        List list = new ArrayList();
-        list.add("张三");
-        list.add("黎明");
-        list.add("李梅");
-        list.add("利比");
-        System.out.println(list.get(3));
-        list.add(3,"宙斯");
-        System.out.println(list);
 
+    /**
+     * Map集合ContainsKey(Object key);
+     */
+    @Test
+    public void  mapContainsTest(){
+        Map<String,Integer> map = new HashMap<>();
+        map.put("李林",160);
+        map.put("丽丽",161);
+        map.put("莉莉",162);
+        boolean bi= map.containsKey("莉莉");
+        System.out.println("bi:"+bi);
+    }
+
+
+    /**
+     * 操作redis SortedSet api
+     */
+    @Test
+    public void redisSortedSetTest(){
+        //获取连接
+        Jedis jedis = new Jedis();
+        jedis.auth("123456");
+        //操作
+        //存储
+        jedis.zadd("mysortedset",3,"亚瑟");
+        jedis.zadd("mysortedset",20,"后裔");
+        jedis.zadd("mysortedset",10,"孙悟空");
+        //获取
+        Set<String> mysortedset =jedis.zrange("mysortedset",0,-1);
+        System.out.println(mysortedset);
+        //关闭连接
+        jedis.close();
+    }
+
+    /**
+     * 操作redis List api
+     */
+    @Test
+    public void redisListTest(){
+        //获取连接 如果使用空参数构造，默认值"localhost",6379
+        Jedis jedis = new Jedis();
+        jedis.auth("123456");
+        //操作
+        //存储
+        jedis.lpush("mylist","a","b","c");  //从左边存
+        jedis.rpush("mylist","a","b","c"); //从右边存
+        //获取
+        List<String> mylist = jedis.lrange("mylist",0,-1);
+        System.out.println(mylist);
+        //list 弹出
+        String element1 = jedis.lpop("mylist"); //c
+        System.out.println(element1);
+        //list 弹出
+        String element2 = jedis.rpop("mylist"); //c
+        System.out.println(element1);
+        //获取
+        List<String> mylist2 = jedis.lrange("mylist",0,-1);
+        System.out.println(mylist2);
+        //关闭连接
+        jedis.close();
+    }
+
+    /**
+     * 操作redis Hash api
+     */
+    @Test
+    public void redisHashTest(){
+        //获取连接
+        Jedis jedis = new Jedis();
+        jedis.auth("123456");
+        //操作
+        //存储
+        jedis.hset("user","name","lisi");
+        jedis.hset("user","age","23");
+        jedis.hset("user","gender","male");
+        //获取
+        String username =jedis.hget("user","name");
+        System.out.println(username);
+
+        //获取hash的所有map中的数据
+        Map<String,String> user = jedis.hgetAll("user");
+        Set<String> keySet =user.keySet();
+        for (String key : keySet){
+            String value =user.get(key);
+            System.out.println(key+":"+value);
+        }
+        //关闭连接
+        jedis.close();
+    }
+
+
+    /**
+     * 操作redis String api
+     */
+    @Test
+    public void redisStrTest(){
+        //获取连接
+        Jedis jedis = new Jedis();
+        jedis.auth("123456");
+        //操作
+        //存储
+        jedis.set("username","zhangsan");
+        //获取
+        String username =jedis.get("username");
+        System.out.println(username);
+
+        //可以使用setex()方法可以指定存储有过期时间的key vlaue
+        //20秒后自动删除
+        jedis.setex("user",20,"hehe");
+        //关闭连接
+        jedis.close();
     }
 
 
@@ -114,26 +231,7 @@ public class JunitTest {
             e.printStackTrace();
         }
     }
-    /**
-     * Mybatis测试
-     */
-    @Test
-    public void mybatisTest(){
 
-        try {
-            InputStream inputStream = Resources.getResourceAsStream("Mybatis/MybatisConfig.xml");
-            SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-            SqlSession session = sqlSessionFactory.openSession();
-            UserMapper mapper = session.getMapper(UserMapper.class);
-            List<User> users=mapper.findAll();
-            for (User user : users){
-                System.out.println(user);
-            }
-            System.out.println("SUCCESS!!!");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
     /**
      * Java正则处理字符串
      */

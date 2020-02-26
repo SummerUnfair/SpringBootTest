@@ -3,7 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/springbootTest_jar</output-path>
     <root id="archive" name="springbootTest.jar">
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/src/main/java/InterfaceTest/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/src/main/java/com/InterfaceTest/META-INF/MANIFEST.MF" />
       </element>
       <element id="module-output" name="springbootTest" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-jdbc/1.5.1.RELEASE/spring-boot-starter-jdbc-1.5.1.RELEASE.jar" path-in-jar="/" />

@@ -23,22 +23,16 @@
     <mysql.version>5.1.25</mysql.version>
     </properties>
 
-    <!--锁定Jar包版本-->
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>${mysql.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <dependencies>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.0.0</version>
         </dependency>
 
         <!--mysql连接-->
@@ -62,14 +56,6 @@
             <version>2.8.0</version>
         </dependency>
 
-        <!-- 使用Mybatis 只需要将此配置导入即可使用-->
-        <!-- Mybatis内置的日志工厂提供日志功能，具体选择哪个日志实现工具，由MyBatis的内置日志工厂确定。它会使用最先找到的-->
-        <!-- 如果一个都未找到，日志功能就会被禁用。 -->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>2.0.0</version>
-        </dependency>
 
         <!--注意排除掉的是log4j-to-slf4j包！！！！！-->
         <!--Spring boot Starter 引入的日志组件是log4j-to-slf4j  -->
@@ -121,6 +107,7 @@
             <version>3.1</version>
         </dependency>
 
+        <!--springboot集成junit测试的起步依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -157,7 +144,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.10</version>
+            <version>4.12</version>
         </dependency>
     </dependencies>
 
@@ -169,7 +156,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>1.5.9.RELEASE</version>
                 <configuration><!-- 在指定目标下的配置-->
-                    <mainClass>InterfaceTest.HandleOfSubtype_end_version</mainClass>
+                    <mainClass>com.InterfaceTest.HandleOfSubtype_end_version</mainClass>
                     <includeSystemScope>true</includeSystemScope>
                 </configuration>
                 <executions>    <!--是否加载该插件的扩展，默认为false-->

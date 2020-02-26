@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        PUBLIC "-//mybatis.org//DTD com.Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="Mapper.UserMapper">
+<mapper namespace="com.Mapper.UserMapper">
 
     <!--查询所有-->
     <select id="findAll"  resultType="user">
@@ -10,7 +10,19 @@
     </select>
 
     <!--保存用户-->
-    <insert id="saveUser" parameterType="Pojo.User">
+    <insert id="saveUser" parameterType="com.Pojo.User">
         insert into usr(id,username) values ( #{id},#{username});
     </insert>
+    <!--更新用户-->
+    <update id="updateUser" parameterType="com.Pojo.User" >
+        update usr set username=#{username} where  id =#{id}
+    </update>
+    <!--删除用户-->
+    <delete id="deleteUser" parameterType="java.lang.Integer">
+        delete from usr where id = #{id}
+    </delete>
+    <!--根据id查询用户-->
+    <select id="findById" parameterType="int" resultType="com.Pojo.User">
+        select * from usr where id=#{uid}
+    </select>
 </mapper>

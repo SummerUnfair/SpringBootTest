@@ -101,12 +101,6 @@
             <version>1.12.1</version>
         </dependency>
 
-        <dependency>
-            <groupId>cglib</groupId>
-            <artifactId>cglib</artifactId>
-            <version>3.1</version>
-        </dependency>
-
         <!--springboot集成junit测试的起步依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -149,6 +143,24 @@
     </dependencies>
 
     <build>
+        <!--插件配置-->
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <!--包含了src/main/java目录下的所有xml资源配置文件-->
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <!--包含了src/main/resources目录下的所有资源配置文件,有别的格式的配置文件时，不要写成**/*.xml-->
+                    <include>**/*</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
         <plugins>
             <!--插件用于springboot项目打执行Jar-->
             <plugin>
@@ -156,7 +168,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>1.5.9.RELEASE</version>
                 <configuration><!-- 在指定目标下的配置-->
-                    <mainClass>com.InterfaceTest.HandleOfSubtype_end_version</mainClass>
+                    <mainClass>com.ferao.InterfaceTest.HandleOfSubtype_end_version</mainClass>
                     <includeSystemScope>true</includeSystemScope>
                 </configuration>
                 <executions>    <!--是否加载该插件的扩展，默认为false-->

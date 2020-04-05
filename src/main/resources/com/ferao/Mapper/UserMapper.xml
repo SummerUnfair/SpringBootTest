@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD com.ferao.Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ferao.Mapper.UserMapper">
+
+    <!--查询所有-->
+    <select id="findAll"  resultType="user">
+      select * from usr ;
+    </select>
+
+    <!--保存用户-->
+    <insert id="saveUser" parameterType="com.ferao.Pojo.User">
+        insert into usr(id,username) values ( #{id},#{username});
+    </insert>
+    <!--更新用户-->
+    <update id="updateUser" parameterType="com.ferao.Pojo.User" >
+        update usr set username=#{username} where  id =#{id}
+    </update>
+    <!--删除用户-->
+    <delete id="deleteUser" parameterType="java.lang.Integer">
+        delete from usr where id = #{id}
+    </delete>
+    <!--根据id查询用户-->
+    <select id="findById" parameterType="int" resultType="com.ferao.Pojo.User">
+        select * from usr where id=#{uid}
+    </select>
+    <!--根据名称模糊查询-->
+    <select id="findByName" parameterType="string" resultType="com.ferao.Pojo.User">
+        select * from usr where username like #{name}
+    </select>
+</mapper>

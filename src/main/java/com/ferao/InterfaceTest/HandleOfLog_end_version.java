@@ -62,33 +62,7 @@ public class HandleOfLog_end_version {
         String path1=(String)prop.get("path1");
         SERVICE_REDHAT=(String)prop.get("SERVICE_REDHAT");
 
-        getApiUseCountByDirectory(path1);
-
     }
-
-    private static void getApiUseCountByDirectory(String path1) throws Exception{
-        //localhost_access_log.2019-09-01.txt
-        File file =new File(path1);
-        File[] listFiles = file.listFiles();
-        for (File file2 : listFiles) {
-            if (file2.getName().endsWith(".txt")) {
-               // System.out.println(file2.getName());
-                String fileAllName=file2.getName();
-                int firstIndex=fileAllName.indexOf(".");
-                int lastIndex=fileAllName.lastIndexOf(".");
-                String finallyName=fileAllName.substring(firstIndex+1,lastIndex);
-                SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");//设置日期格式
-                String systemTime=df.format(new Date());
-
-                if (finallyName.equals(systemTime)){
-                    //System.out.println(file2.getName());
-                    getLongCount(file2);   //200次数 500次数  接口名称
-                }
-
-            }
-        }
-    }
-
 
     public static void   getLongCount(File file2) throws Exception {
 

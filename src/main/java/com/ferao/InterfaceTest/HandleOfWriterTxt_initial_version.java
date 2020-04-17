@@ -20,8 +20,6 @@ public class HandleOfWriterTxt_initial_version {
     public static String user;
     public static String password;
 
-    String datefm="";
-    String dateNow="";
 
     public static void main(String[] args) {
         HandleOfWriterTxt_initial_version G=new HandleOfWriterTxt_initial_version();
@@ -39,53 +37,14 @@ public class HandleOfWriterTxt_initial_version {
         user = "GIS";
         password = "M3fXy_TFaUt";
 
-        datefm=getNowTime();
-        dateNow=getNowTime();
-
-        System.out.println("datefm:"+datefm);
-        System.out.println("dateNow:"+dateNow);
-
     }
-    //获取当月
-    public static String getNowTime() {
-        Calendar cal = Calendar.getInstance();
-        SimpleDateFormat dft = new SimpleDateFormat("yyyyMMdd");
-        String lastMonth = dft.format(cal.getTime());
-        return lastMonth;
-    }
-    //获取下个月
-    public static String getPreMonth() {
-        Calendar cal = Calendar.getInstance();
-        cal.add(cal.MONTH, 1);
-        SimpleDateFormat dft = new SimpleDateFormat("yyyyMMdd");
-        String preMonth = dft.format(cal.getTime());
-        return preMonth;
-    }
-    //获取上个月
-    public static String getLastMonth() {
-        Calendar cal = Calendar.getInstance();
-        cal.add(cal.MONTH, -1);
-        SimpleDateFormat dft = new SimpleDateFormat("yyyyMMdd");
-        String lastMonth = dft.format(cal.getTime());
-        return lastMonth;
-    }
-
 
     public void writeToTxt(String sqlString) {
-        //日期处理
-        String datefm="";
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMdd");
-        try{
-            Date date = new java.util.Date();
-            datefm = sdf.format(date);
-            System.out.println(datefm);
-        }catch(Exception e){
-            e.printStackTrace();
-        };
+
         //写入操作准备
         try (
                 //true表示会接着跑
-                FileOutputStream fileOutputStream = new FileOutputStream(path+"combo_menu_"+datefm+".txt",true);
+                FileOutputStream fileOutputStream = new FileOutputStream(path+"combo_menu_"+"datefm"+".txt",true);
                 OutputStreamWriter outputStreamWriter = new OutputStreamWriter(fileOutputStream,"UTF-8");
                 BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
                 PrintWriter out = new PrintWriter(bufferedWriter);

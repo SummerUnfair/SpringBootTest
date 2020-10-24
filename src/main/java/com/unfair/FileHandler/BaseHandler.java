@@ -1,5 +1,10 @@
 package com.unfair.FileHandler;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import org.apache.commons.lang3.StringUtils;
+import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,7 +35,8 @@ public class BaseHandler {
         ModelEnum modelEnum = ModelEnum.TO_TXT;
         switch (modelEnum) {
             case TO_TXT:
-                baseHandler.readToTxt(inPath, null);
+                ReturnT returnT = baseHandler.readToTxt(inPath, null);
+                System.out.println(returnT.getMessage());
                 break;
             case TO_DATABASE:
                 baseHandler.readToDataBase(null);
@@ -51,7 +57,25 @@ public class BaseHandler {
      * @param in
      * @param out
      */
-    public void readToTxt(String in, String out) {
+    public ReturnT readToTxt(String in, String out) {
+
+        if (StringUtils.isEmpty(in)){
+            logger.info("读取路径不能为null");
+            return ReturnT.builder()
+                    .message("读取路径不能为null")
+                    .returnData(in)
+                    .build();
+        }
+
+        if (!StringUtils.endsWith(in,".txt")){
+            logger.info("文件格式不正确");
+            return ReturnT.builder()
+                    .message("文件格式不正确")
+                    .returnData(in)
+                    .build();
+        }
+
+        logger.info("读取文件：{} | 写入文件：{}", in, out);
         long startTime = 0;
         long endTime = 0;
         long useTime = 0;
@@ -61,6 +85,10 @@ public class BaseHandler {
             File file = new File(in);
             if (!file.exists()) {
                 logger.info("当前路径下未找到文件:{}", in);
+                return ReturnT.builder()
+                        .message("未找到文件:"+in)
+                        .returnData(in)
+                        .build();
             }
             reader = new FileReader(file);
             br = new BufferedReader(reader);
@@ -72,7 +100,7 @@ public class BaseHandler {
             }
 
         } catch (IOException e) {
-
+            logger.info("文件读取中异常");
         } finally {
             endTime = System.currentTimeMillis();
             try {
@@ -83,10 +111,19 @@ public class BaseHandler {
                 logger.info("BufferedReader关闭异常");
                 e.printStackTrace();
             }
-            useTime = endTime - startTime;
-            logger.info("任务耗时:{}毫秒", useTime);
+            if (startTime !=0){
+                useTime = endTime - startTime;
+                logger.info("任务耗时:{}毫秒", useTime);
+                return ReturnT.builder()
+                        .message("SUCCESS")
+                        .returnData("任务耗时:{}毫秒"+useTime)
+                        .build();
+            }
+            return ReturnT.builder()
+                    .message("SUCCESS")
+                    .returnData(null)
+                    .build();
         }
-
     }
 
     public void readToDataBase(String in) {
@@ -123,4 +160,45 @@ public class BaseHandler {
 
         TO_TXT, TO_DATABASE;
     }
+
+    public class ReadToSpecificException extends Exception {
+        private String errCode;
+        private String errMsg;
+
+        public ReadToSpecificException() {
+            super();
+        }
+        public ReadToSpecificException(String message, Throwable cause) {
+            super(message, cause);
+        }
+
+        public ReadToSpecificException(String message) {
+            super(message);
+        }
+        public ReadToSpecificException(Throwable cause) {
+            super(cause);
+        }
+
+        public ReadToSpecificException(String errCode, String errMsg) {
+            super(errCode + ":" + errMsg);
+            this.errCode = errCode;
+            this.errMsg = errMsg;
+        }
+
+        public String getErrCode() {
+            return this.errCode;
+        }
+
+        public String getErrMsg() {
+            return this.errMsg;
+        }
+    }
+
+}
+@Data
+@AllArgsConstructor
+@Builder
+class ReturnT<T>{
+    private T returnData;
+    private String message;
 }

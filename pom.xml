@@ -35,6 +35,11 @@
             <version>2.0.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+
         <!--mysql连接-->
         <dependency>
             <groupId>mysql</groupId>
@@ -128,13 +133,6 @@
             <version>3.3</version>
         </dependency>
 
-        <!--阿里连接池支持-->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.0.12</version>
-        </dependency>
-
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -168,7 +166,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>1.5.9.RELEASE</version>
                 <configuration><!-- 在指定目标下的配置-->
-                    <mainClass>com.ferao.InterfaceTest.HandleOfSubtype_end_version</mainClass>
+                    <mainClass>com.unfair.InterfaceTest.HandleOfSubtype_end_version</mainClass>
                     <includeSystemScope>true</includeSystemScope>
                 </configuration>
                 <executions>    <!--是否加载该插件的扩展，默认为false-->

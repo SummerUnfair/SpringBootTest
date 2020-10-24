@@ -2,27 +2,192 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="451d450d-eacf-4037-849d-b9b93ff18595" name="Default Changelist" comment="2020/2/26&#10;springboot格式及整合mybatis">
-      <change afterPath="$PROJECT_DIR$/a.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/Demp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/TxtUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/interfaceUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/jdbcUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/logUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unfair/FileHandler/BaseHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unfair/InterfaceTest/TxtUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unfair/InterfaceTest/interfaceUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unfair/Regex/Regex_Address_END.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unfair/Util/JdbcUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unfair/worm/ExceptionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unfair/worm/JunitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/unfair/worm/UnfariPerson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/unfair/Mapper/MybatisTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/springbootTest_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/springbootTest_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/Get_Address_Split_advance_version.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfApiDim_advance_version.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfApiDim_end_version.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfApiDim_inital_version.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfApiTest_one_version.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfApiTest_two_version.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfGridCode_advance_version.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfGridCode_initial_version.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfLog_end_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfLog_end_version.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfWriterTxt_initial_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfWriterTxt_initial_version.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/I_CheckInfo_1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/I_CheckInfo_2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/TI_UpdateInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/WriterIntoDB/WriterToDB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/Controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/DataSave/ArrayStack_initial_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/DataSave/stackDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/DataSave/Binary_Search.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/DataSave/Dynamic_advance_version.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/DataSave/Dynamic_end2_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/DataSave/Dynamic_end2_version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/DataSave/Dynamic_end_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/DataSave/Dynamic_end_version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/DataSave/Dynamic_initial_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/DataSave/Dynamic_initial_version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/DataSave/Heap_initial_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/DataSave/Heap_initial_version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/DataSave/NNN_initial_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/DataSave/NNN_initial_version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/DataSave/SingleLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/DataSave/SingleLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/DataSave/SingleTon_advance_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/DataSave/SingleTon_advance_version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/DataSave/SingleTon_end_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/DataSave/SingleTon_end_version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/DataSave/SingleTon_initial_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/DataSave/SingleTon_initial_version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/DataSortTest/BubbleSort_advance_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/DataSortTest/BubbleSort_advance_version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/DataSortTest/BubbleSort_end_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/DataSortTest/BubbleSort_end_version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/DataSortTest/BubbleSort_initial_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/DataSortTest/BubbleSort_initial_version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/DataSortTest/InsertionSort_initial_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/DataSortTest/InsertionSort_initial_version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/DataSortTest/QuickSort_initial_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/DataSortTest/QuickSort_initial_version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/DataSortTest/SelectionSort_advance_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/DataSortTest/SelectionSort_advance_version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/DataSortTest/SelectionSort_initial_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/DataSortTest/SelectionSort_initial_version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/GetSimpleData/Get_AddressName_end_version.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/GetSimpleData/Get_HttpInfo_end_version.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/GetSimpleData/Get_HttpInfo_inital_version.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/GetSimpleData/Get_Standard_Time.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/Demp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfFtpWriter_initial_version.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfLog_advance_version.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfLog_end_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/InterfaceTest/HandleOfLog_end_version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfLog_initial_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/InterfaceTest/HandleOfLog_initial_version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfSubtype_end_version.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfWriterTxt_initial_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/InterfaceTest/HandleOfWriterTxt_initial_version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOf_Figure_inital_version.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/LBX.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/TxtUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/interfaceUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/jdbcUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/InterfaceTest/jdbcUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/logUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/InterfaceTest/logUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/Mapper/AddressMassegeMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/Mapper/UserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/Pojo/AddrInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/Pojo/Emp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/Pojo/Emp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/Pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/Pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/Regex/Regex_Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/Regex/Regex_Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/Regex/Regex_Address_END.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/Regex/Regex_Address_END1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/Regex/Regex_Address_END1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/Regex/Regex_Address_END2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/Regex/Regex_Address_END2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/Regex/Regex_Address_Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/Regex/Regex_Address_Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/Regex/Regex_Address_Test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/Regex/Regex_Address_Test2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/Regex/Regex_Address_Test3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/Regex/Regex_Address_Test3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/SplitWithTxt/HandleOfTicke_end_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/SplitWithTxt/HandleOfTicke_end_version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/SplitWithTxt/HandleOfTicke_initial_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/SplitWithTxt/HandleOfTicke_initial_version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/SplitWithTxt/HandleOfTicket_advance_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/SplitWithTxt/HandleOfTicket_advance_version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/SplitWithTxt/HitWithTagFH.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/SplitWithTxt/TxtWorkThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/SplitWithTxt/TxtWorkThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/SplitWordProject/SimHashService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/SplitWordProject/hanlp_test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/ThreadTest/ConnectionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/ThreadTest/ConnectionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/ThreadTest/MainThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/ThreadTest/MainThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/ThreadTest/SaleTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/ThreadTest/SaleTicket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/ThreadTest/SendThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/ThreadTest/SendThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/TimeComplex/Sort_init_version.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/TimeComplex/Time_Complex_initial_version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/TimeComplex/Time_Complex_initial_version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/Util/HttpClientUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/Util/HttpClientUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/Util/JdbcUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/Util/JdbcUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/Util/JdbcUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/Util/SmartMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/Util/SmartMatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/WriterIntoDB/WriteIntoRedis_inital_version.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/WriterIntoDB/WriterToRedis.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/worm/CrawlerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/worm/CrawlerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/worm/JunitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/worm/SplitTest2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/worm/SplitTest2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ferao/worm/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unfair/worm/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DataBase.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ferao/Mapper/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/druid.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/ferao/Mapper/MybatisTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataBase.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/Controller/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/DataSave/ArrayStack_initial_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/DataSave/Binary_Search.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/DataSave/Dynamic_advance_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/DataSave/Dynamic_end2_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/DataSave/Dynamic_end_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/DataSave/Dynamic_initial_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/DataSave/Heap_initial_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/DataSave/NNN_initial_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/DataSave/SingleLinkedList$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/DataSave/SingleLinkedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/DataSave/SingleTon_advance_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/DataSave/SingleTon_end_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/DataSave/SingleTon_initial_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/DataSortTest/BubbleSort_advance_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/DataSortTest/BubbleSort_end_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/DataSortTest/BubbleSort_initial_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/DataSortTest/InsertionSort_initial_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/DataSortTest/QuickSort_initial_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/DataSortTest/SelectionSort_advance_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/DataSortTest/SelectionSort_initial_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/GetSimpleData/Get_AddressName_end_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/GetSimpleData/Get_HttpInfo_end_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/GetSimpleData/Get_HttpInfo_inital_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/GetSimpleData/Get_Standard_Time.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/InterfaceTest/Demp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/InterfaceTest/HandleOfFtpWriter_initial_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/InterfaceTest/HandleOfLog_advance_version$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/InterfaceTest/HandleOfLog_advance_version$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/InterfaceTest/HandleOfLog_advance_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/InterfaceTest/HandleOfLog_end_version$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/InterfaceTest/HandleOfLog_end_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/InterfaceTest/HandleOfLog_initial_version$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/InterfaceTest/HandleOfLog_initial_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/InterfaceTest/HandleOfSubtype_end_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/InterfaceTest/HandleOfWriterTxt_initial_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/InterfaceTest/HandleOf_Figure_inital_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/InterfaceTest/LBX$Hexagon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/InterfaceTest/LBX$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/InterfaceTest/LBX.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/InterfaceTest/TxtUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/InterfaceTest/interfaceUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/InterfaceTest/jdbcUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/InterfaceTest/logUtils$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/InterfaceTest/logUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/Mapper/AddressMassegeMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/Mapper/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/Mapper/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/Pojo/AddrInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/Pojo/Emp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/Pojo/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/Regex/Regex_Address.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/Regex/Regex_Address_END.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/Regex/Regex_Address_END1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/Regex/Regex_Address_END2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/Regex/Regex_Address_Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/Regex/Regex_Address_Test2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/Regex/Regex_Address_Test3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/SplitWithTxt/HandleOfTicke_end_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/SplitWithTxt/HandleOfTicke_initial_version$Ticket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/SplitWithTxt/HandleOfTicke_initial_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/SplitWithTxt/HandleOfTicket_advance_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/SplitWithTxt/HitWithTagFH.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/SplitWithTxt/TxtWorkThread$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/SplitWithTxt/TxtWorkThread$RestoreQueueThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/SplitWithTxt/TxtWorkThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/SplitWordProject/SimHashService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/SplitWordProject/hanlp_test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/ThreadTest/ConnectionTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/ThreadTest/MainThread$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/ThreadTest/MainThread$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/ThreadTest/MainThread$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/ThreadTest/MainThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/ThreadTest/SaleTicket.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/ThreadTest/SendThread$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/ThreadTest/SendThread$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/ThreadTest/SendThread.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/TimeComplex/Sort_init_version$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/TimeComplex/Sort_init_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/TimeComplex/Time_Complex_initial_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/Util/HttpClientUtil$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/Util/HttpClientUtil$GetRunnable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/Util/HttpClientUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/Util/JdbcUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/Util/JdbcUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/Util/SmartMatch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/WriterIntoDB/WriteIntoRedis_inital_version.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/WriterIntoDB/WriterToDB.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/WriterIntoDB/WriterToRedis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/worm/JunitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ferao/worm/SplitTest2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/druid.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ferao/Mapper/MybatisTest.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -32,8 +197,111 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="SpringBootTest" />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/InterfaceTest/HandleOfLog_end_version.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="16" column="27" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/Pojo/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/FileHandler/BaseHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="851">
+              <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/InterfaceTest/HandleOfWriterTxt_initial_version.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1081">
+              <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/InterfaceTest/HandleOfLog_initial_version.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3542">
+              <caret line="155" column="1" selection-start-line="155" selection-start-column="1" selection-end-line="155" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/InterfaceTest/jdbcUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="667">
+              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/Util/JdbcUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="460">
+              <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/Util/JdbcUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/Regex/Regex_Address_END.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4416">
+              <caret line="192" column="14" selection-start-line="192" selection-start-column="14" selection-end-line="192" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/Regex/Regex_Address.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -47,8 +315,16 @@
       <find>datasource.driver</find>
       <find>mybatis.mapper</find>
       <find>JSONArray</find>
-      <find>conn</find>
       <find>updateMassage</find>
+      <find>map</find>
+      <find>FTPClient</find>
+      <find>ftpPath</find>
+      <find>codeCount</find>
+      <find>BinaryJedis</find>
+      <find>dataSource</find>
+      <find>Node</find>
+      <find>conn</find>
+      <find>stmt</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -57,32 +333,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/Mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/worm/MybatisJunitTest.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/Mybatis/MybatisMapper/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Pojo/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/InterfaceTest/Get_Address_Split_advance_version.java" />
-        <option value="$PROJECT_DIR$/src/main/java/worm/JunitTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/InterfaceTest/HandleOfApiDim_advance_version.java" />
-        <option value="$PROJECT_DIR$/src/main/java/worm/SplitTest2.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/logback.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/worm/SplitTest2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/SpringBootApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/logback-spring.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/MybatisTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/Mapper/UserMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/Controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/SpringBootTestApplication.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/Mapper/MybatisTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ferao/DataSave11/test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ferao/Controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/Mybatis/MybatisConfig.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/ferao/Mapper/UserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/ferao/Mapper/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/ferao/Mapper/MybatisTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ferao/worm/JunitTest.java" />
         <option value="$PROJECT_DIR$/a.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/Get_Address_Split_advance_version.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfApiTest_one_version.java" />
@@ -96,15 +352,48 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfWriterTxt_initial_version.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfGridCode_initial_version.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/logUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/TxtUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfLog_end_version.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/Demp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ferao/WriterIntoDB/WriterToDB.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfFtpWriter_initial_version.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ferao/Controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ferao/Regex/Regex_Address.java" />
+        <option value="$PROJECT_DIR$/ferao-utils.md" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfLog_end_version.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ferao/Regex/Regex_Address_Test2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ferao/DataSortTest/BubbleSort_advance_version.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/DataBase.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ferao/DataSave/stackDemo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ferao/DataSave/Heap_initial_version.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ferao/Util/JdbcUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ferao/worm/SplitTest2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ferao/worm/JunitTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ferao/Regex/Regex_Address_END.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/ferao/Mapper/MybatisTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ferao/worm/UnfariPerson.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ferao/DataSave/Binary_Search.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ferao/worm/ExceptionTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ferao/DataSave/Dynamic_advance_version.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/Demp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOf_Figure_inital_version.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/interfaceUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/TxtUtils.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ferao/base/InstanceUse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfLog_advance_version.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unfair/InterfaceTest/HandleOfLog_end_version.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unfair/InterfaceTest/HandleOfLog_advance_version.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unfair/Util/JdbcUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/unfair/FileHandler/BaseHandler.java" />
       </list>
     </option>
   </component>
   <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="C:\Users\Hasee\.m2\repository" />
+        <option name="userSettingsFile" value="D:\BaiDuYun\installPath\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
     <option name="importingSettings">
       <MavenImportingSettings>
         <option name="importAutomatically" value="true" />
@@ -138,6 +427,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -178,7 +469,37 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="ferao" type="462c0819:PsiDirectoryNode" />
+              <item name="unfair" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBootTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBootTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="unfair" type="462c0819:PsiDirectoryNode" />
+              <item name="FileHandler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBootTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBootTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="unfair" type="462c0819:PsiDirectoryNode" />
+              <item name="Util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBootTest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBootTest" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="unfair" type="462c0819:PsiDirectoryNode" />
+              <item name="worm" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringBootTest" type="b2602c69:ProjectViewProjectNode" />
@@ -191,8 +512,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -205,13 +524,13 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587130037640" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1603532137013" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -235,13 +554,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Demp">
+  <component name="RunManager" selected="Application.BaseHandler">
+    <configuration name="BaseHandler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.unfair.FileHandler.BaseHandler" />
+      <module name="SpringBootTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.unfair.FileHandler.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Demp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ferao.InterfaceTest.Demp" />
       <module name="SpringBootTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ferao.InterfaceTest.*" />
+          <option name="PATTERN" value="com.unfair.InterfaceTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -249,77 +581,59 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JunitTest.PatternPro" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Dynamic_advance_version" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ferao.DataSave.Dynamic_advance_version" />
       <module name="SpringBootTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ferao.worm.*" />
+          <option name="PATTERN" value="com.unfair.DataSave.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ferao.worm" />
-      <option name="MAIN_CLASS_NAME" value="com.ferao.worm.JunitTest" />
-      <option name="METHOD_NAME" value="PatternPro" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JunitTest.getAllFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ExceptionTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ferao.worm.ExceptionTest" />
       <module name="SpringBootTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ferao.worm.*" />
+          <option name="PATTERN" value="com.unfair.worm.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ferao.worm" />
-      <option name="MAIN_CLASS_NAME" value="com.ferao.worm.JunitTest" />
-      <option name="METHOD_NAME" value="getAllFile" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JunitTest.hashTableTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InstanceUse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ferao.base.InstanceUse" />
       <module name="SpringBootTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ferao.worm.*" />
+          <option name="PATTERN" value="com.ferao.base.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ferao.worm" />
-      <option name="MAIN_CLASS_NAME" value="com.ferao.worm.JunitTest" />
-      <option name="METHOD_NAME" value="hashTableTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MybatisTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SpringBootTestApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="SpringBootTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.ferao.Mapper.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.ferao.Mapper" />
-      <option name="MAIN_CLASS_NAME" value="com.ferao.Mapper.MybatisTest" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.SpringBootTestApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BaseHandler" />
+        <item itemvalue="Application.InstanceUse" />
         <item itemvalue="Application.Demp" />
-        <item itemvalue="JUnit.JunitTest.hashTableTest" />
-        <item itemvalue="JUnit.JunitTest.PatternPro" />
-        <item itemvalue="JUnit.JunitTest.getAllFile" />
-        <item itemvalue="JUnit.MybatisTest.test" />
+        <item itemvalue="Application.Dynamic_advance_version" />
+        <item itemvalue="Application.ExceptionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -397,7 +711,34 @@
       <workItem from="1587022090133" duration="6670000" />
       <workItem from="1587033375046" duration="9326000" />
       <workItem from="1587054999306" duration="654000" />
-      <workItem from="1587099112097" duration="19298000" />
+      <workItem from="1587099112097" duration="20099000" />
+      <workItem from="1587184273347" duration="8668000" />
+      <workItem from="1587270239873" duration="6274000" />
+      <workItem from="1587352878949" duration="4761000" />
+      <workItem from="1587361234980" duration="8002000" />
+      <workItem from="1587460894222" duration="641000" />
+      <workItem from="1587956132714" duration="1888000" />
+      <workItem from="1588049072059" duration="1223000" />
+      <workItem from="1588412510520" duration="2504000" />
+      <workItem from="1588836079514" duration="1876000" />
+      <workItem from="1589363228616" duration="655000" />
+      <workItem from="1589419375997" duration="3162000" />
+      <workItem from="1589765135240" duration="41000" />
+      <workItem from="1589769046511" duration="60000" />
+      <workItem from="1590387801714" duration="6382000" />
+      <workItem from="1593334231646" duration="847000" />
+      <workItem from="1595669787079" duration="3302000" />
+      <workItem from="1595693361900" duration="160000" />
+      <workItem from="1595745559925" duration="2048000" />
+      <workItem from="1598685058886" duration="797000" />
+      <workItem from="1599281901601" duration="9102000" />
+      <workItem from="1602848449349" duration="4612000" />
+      <workItem from="1602900643172" duration="4646000" />
+      <workItem from="1602953923275" duration="3253000" />
+      <workItem from="1602995389754" duration="4554000" />
+      <workItem from="1603455540331" duration="1961000" />
+      <workItem from="1603515986570" duration="7477000" />
+      <workItem from="1603530794984" duration="1352000" />
     </task>
     <task id="LOCAL-00001" summary="2020/2/20&#10;优化日志及Pom文件配置">
       <created>1582146970166</created>
@@ -456,7 +797,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143763000" />
+    <option name="totallyTimeSpent" value="234812000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -469,29 +810,30 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.3285968" visible="true" weight="0.3016086" />
-      <window_info id="Structure" order="1" sideWeight="0.67140317" side_tool="true" weight="0.2386059" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7082153" visible="true" weight="0.21447721" />
+      <window_info id="Structure" order="1" sideWeight="0.2917847" side_tool="true" weight="0.24061662" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Favorites" order="6" sideWeight="0.19121814" side_tool="true" weight="0.24061662" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3937677" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.20254958" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932975" weight="0.25637394" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.30028328" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.20254958" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.34419262" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.25070822" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.23087819" />
       <window_info anchor="bottom" id="Messages" order="14" weight="0.2917847" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -578,332 +920,345 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/worm/test.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/ferao/Mapper/UserMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/InterfaceTest/logUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/DataBase.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/Pojo/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="57" column="13" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/ferao/Mapper/MybatisTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/regex/Pattern.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="557">
-          <caret line="1136" lean-forward="true" selection-start-line="1136" selection-end-line="1136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/Regex/RegexOfAddress_init_version.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/Regex/RegexOfAddress_end_version.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/Regex/RegexOfAddress_advance_version.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/Regex/RegexOfAddress.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/Regex/Regex_Address_END.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/Regex/Regex_Address.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6992">
-          <caret line="315" selection-start-line="315" selection-end-line="315" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/worm/JunitTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/SpringBootTestApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/Mapper/AddressMassegeMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/Mapper/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2829">
-          <caret line="123" selection-start-line="123" selection-end-line="123" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/a.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="4" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/photo.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/net/sf/json-lib/json-lib/2.4/json-lib-2.4-jdk15.jar!/net/sf/json/JSONObject.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#88162#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/io/BufferedReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="387" column="18" selection-start-line="387" selection-start-column="18" selection-end-line="387" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfApiDim_advance_version.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfApiDim_inital_version.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfApiTest_one_version.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfApiTest_two_version.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/I_CheckInfo_1.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/I_CheckInfo_2.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/Map.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="166" column="7" lean-forward="true" selection-start-line="166" selection-start-column="7" selection-end-line="166" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/sql/PreparedStatement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="488" column="23" selection-start-line="488" selection-start-column="23" selection-end-line="488" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/TI_UpdateInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/Calendar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="2795" column="23" lean-forward="true" selection-start-line="2795" selection-start-column="23" selection-end-line="2795" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfSubtype_end_version.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2024">
-          <caret line="97" column="4" lean-forward="true" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOf_Figure_inital_version.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="38" column="31" selection-start-line="38" selection-start-column="31" selection-end-line="38" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfGridCode_initial_version.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfGridCode_advance_version.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfLog_initial_version.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-74">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfLog_advance_version.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfFtpWriter_initial_version.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-874">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/jdbcUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="368">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/initResource.properties">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/DataSave/SingleTon_initial_version.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/DataSave/SingleTon_end_version.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/DataSave/SingleLinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/logUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/DataSave/Heap_initial_version.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        <state relative-caret-position="230">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfLog_end_version.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/worm/JunitTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="145" column="55" lean-forward="true" selection-start-line="145" selection-start-column="55" selection-end-line="145" selection-end-column="55" />
+        <state relative-caret-position="6440">
+          <caret line="280" column="15" selection-start-line="280" selection-start-column="15" selection-end-line="280" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/worm/test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/worm/SplitTest2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/Exception.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="897">
+          <caret line="65" column="9" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
           <folding>
-            <element signature="e#3238#3252#0" expanded="true" />
+            <element signature="e#1663#1664#0" expanded="true" />
+            <element signature="e#1693#1694#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/Demp.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/Throwable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5451">
+          <caret line="263" column="11" selection-start-line="263" selection-start-column="11" selection-end-line="263" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/unfair/Mapper/MybatisTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/DataSave/Binary_Search.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/DataSave/Dynamic_advance_version.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/DataSave/stackDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.8.0/jedis-2.8.0.jar!/redis/clients/jedis/BinaryJedis.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="31" column="68" selection-start-line="31" selection-start-column="68" selection-end-line="31" selection-end-column="68" />
+          <folding>
+            <element signature="e#1327#1328#0" expanded="true" />
+            <element signature="e#1369#1370#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/net/URI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="847" column="22" selection-start-line="847" selection-start-column="22" selection-end-line="847" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/worm/ExceptionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.8.0/jedis-2.8.0.jar!/redis/clients/jedis/Jedis.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1484">
+          <caret line="1642" lean-forward="true" selection-start-line="1642" selection-end-line="1642" />
+          <folding>
+            <element signature="e#1236#1237#0" expanded="true" />
+            <element signature="e#1269#1270#0" expanded="true" />
+            <element signature="e#54966#54967#0" expanded="true" />
+            <element signature="e#55009#55010#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/Demp.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOf_Figure_inital_version.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/DataSave/Dynamic_end2_version.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/SplitWithTxt/TxtWorkThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4301">
+          <caret line="191" column="11" selection-start-line="191" selection-start-column="11" selection-end-line="191" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/SplitWithTxt/HandleOfTicket_advance_version.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/DataSortTest/BubbleSort_advance_version.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="897">
+          <caret line="39" column="30" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/InterfaceTest/interfaceUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/Collections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1605">
+          <caret line="139" column="57" selection-start-line="139" selection-start-column="57" selection-end-line="139" selection-end-column="57" />
+          <folding>
+            <element signature="e#5644#5645#0" expanded="true" />
+            <element signature="e#5675#5676#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/Comparable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2576">
+          <caret line="135" column="4" selection-start-line="135" selection-start-column="4" selection-end-line="135" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="1696" column="15" selection-start-line="1696" selection-start-column="15" selection-end-line="1696" selection-end-column="15" />
+          <folding>
+            <element signature="e#66457#66458#0" expanded="true" />
+            <element signature="e#66495#66496#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/base/InstanceUse.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/worm/CrawlerThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#874#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/worm/UnfariPerson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/jre/lib/rt.jar!/sun/net/www/content/text/Generic.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/Integer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="644">
+          <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/InterfaceTest/TxtUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1702">
+          <caret line="74" column="13" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/TimeComplex/Time_Complex_initial_version.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/SplitWithTxt/HandleOfTicke_end_version.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/LBX.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/FileHandler.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/InterfaceTest/HandleOfLog_advance_version.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/InterfaceTest/HandleOfLog_end_version.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/TxtUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/InterfaceTest/HandleOfWriterTxt_initial_version.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1081">
+          <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/InterfaceTest/HandleOfLog_initial_version.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3542">
+          <caret line="155" column="1" selection-start-line="155" selection-start-column="1" selection-end-line="155" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/InterfaceTest/jdbcUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/Util/JdbcUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/Util/JdbcUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="8" column="41" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/LBX.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/Regex/Regex_Address_END.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        <state relative-caret-position="4416">
+          <caret line="192" column="14" selection-start-line="192" selection-start-column="14" selection-end-line="192" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/HandleOfWriterTxt_initial_version.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1012">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/WriterIntoDB/WriterToDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="37" column="1" lean-forward="true" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/InterfaceTest/interfaceUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/Regex/Regex_Address.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
-          <caret line="37" column="16" lean-forward="true" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="16" />
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/Pojo/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/unfair/FileHandler/BaseHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="851">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/WriterIntoDB/WriteIntoRedis_inital_version.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="147" column="11" lean-forward="true" selection-start-line="147" selection-start-column="11" selection-end-line="147" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ferao/WriterIntoDB/WriterToRedis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2921">
-          <caret line="131" column="20" lean-forward="true" selection-start-line="131" selection-start-column="20" selection-end-line="131" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -918,7 +1273,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

@@ -16,6 +16,13 @@ public class SendThread {
         //创建锁对象，保证唯一
         Object obj = new Object();
         //创建一个顾客线程(消费者)
+
+        new Thread(){
+            @Override
+            public void run() {
+                super.run();
+            }
+        }.start();
         new Thread() {
             @Override
             public void run(){
@@ -24,7 +31,6 @@ public class SendThread {
 
                     //保证等待和唤醒的线程只能一个执行，需要使用同步技术
                     synchronized (obj){
-
                         System.out.println("顾客：告知老板要的包子的种类和数量");
                         //调用wait()方法，放弃cpu的执行权，进入到WAITTIME状态(无线等待)
                         try {
